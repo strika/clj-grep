@@ -1,36 +1,22 @@
 # clj-grep
 
-FIXME: description
+Grep kata in Clojure.
 
-## Installation
+In response to:
 
-Download from http://example.com/FIXME.
+- https://github.com/shiroyasha/rust_grep
+- https://github.com/rastasheep/go-grep
+- https://github.com/darkofabijan/elixir-grep
 
 ## Usage
 
-FIXME: explanation
-
-    $ java -jar clj-grep-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+```bash
+lein run "path/to/directory" "search"
+```
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2014 Nebojsa Stricevic
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
