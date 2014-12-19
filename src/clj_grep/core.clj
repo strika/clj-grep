@@ -1,5 +1,6 @@
 (ns clj-grep.core
-  (:gen-class))
+  (:gen-class)
+  (:require [clojure.core.reducers :as r]))
 
 (defn file-path [file]
   (.getPath file))
@@ -18,7 +19,8 @@
 (defn find-files-with-content [path content]
   (->> (recursive-ls path)
        (filter file?)
-       (filter #(file-has-content? % content))))
+       (r/filter #(file-has-content? % content))
+       (into [])))
 
 (defn print-files-with-content [path content]
   (let [files (find-files-with-content path content)]
